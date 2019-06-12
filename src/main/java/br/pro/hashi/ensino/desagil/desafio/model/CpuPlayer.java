@@ -3,11 +3,11 @@ package br.pro.hashi.ensino.desagil.desafio.model;
 import java.util.Stack;
 
 public class CpuPlayer extends Player {
-    boolean[][] visited;
-    int numRows;
-    int numCols;
+    private final boolean[][] visited;
+    private final int numRows;
+    private final int numCols;
 
-    Stack<Node> stack;
+    private final Stack<Node> stack;
 
 
     public CpuPlayer(int row, int col, Board board) {

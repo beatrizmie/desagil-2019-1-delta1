@@ -11,9 +11,8 @@ public class Element {
         this.col = col;
     }
 
-    public Random getRandomNumber(){
-      Random random = new Random();
-      return random;
+    protected Random getRandomNumber(){
+      return new Random();
     }
 
     public int getRow() {
@@ -24,7 +23,7 @@ public class Element {
         return col;
     }
 
-    public void move(int rowShift, int colShift){
+    protected void move(int rowShift, int colShift){
         row += rowShift;
         col += colShift;
     }
