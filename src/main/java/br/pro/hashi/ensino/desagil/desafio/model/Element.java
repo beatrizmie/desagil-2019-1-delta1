@@ -1,5 +1,7 @@
 package br.pro.hashi.ensino.desagil.desafio.model;
 
+import java.util.Random;
+
 public class Element {
     protected int row;
     protected int col;
@@ -9,11 +11,21 @@ public class Element {
         this.col = col;
     }
 
+    public Random getRandomNumber(){
+      Random random = new Random();
+      return random;
+    }
+
     public int getRow() {
         return row;
     }
 
     public int getCol() {
         return col;
+    }
+
+    public void move(int rowShift, int colShift){
+        row += rowShift;
+        col += colShift;
     }
 }
