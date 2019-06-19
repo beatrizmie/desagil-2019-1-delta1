@@ -3,34 +3,37 @@ package br.pro.hashi.ensino.desagil.desafio.model;
 import java.io.IOException;
 
 public class Model {
-    private final Board board;
-    private final Target target;
-    private final HumanPlayer humanPlayer;
-    private final CpuPlayer cpuPlayer;
+  private final Board board;
+  private final Target target;
+  private final HumanPlayer humanPlayer;
+  private final CpuPlayer cpuPlayer;
+  private final int vel;
 
-    public Model() throws IOException {
-        board = new Board("board.txt");
+  public Model() throws IOException {
+    vel = 1;
 
-        target = new Target(4, 14, board);
+    board = new Board("board.txt");
 
-        humanPlayer = new HumanPlayer(0, 0, board);
+    target = new Target(4, 14, board);
 
-        cpuPlayer = new CpuPlayer(8, 18, board);
-    }
+    humanPlayer = new HumanPlayer(0, 0, board);
 
-    public Board getBoard() {
-        return board;
-    }
+    cpuPlayer = new CpuPlayer(8, 18, board, vel);
+  }
 
-    public Target getTarget() {
-        return target;
-    }
+  public Board getBoard() {
+    return board;
+  }
 
-    public HumanPlayer getHumanPlayer() {
-        return humanPlayer;
-    }
+  public Target getTarget() {
+    return target;
+  }
 
-    public CpuPlayer getCpuPlayer() {
-        return cpuPlayer;
-    }
+  public HumanPlayer getHumanPlayer() {
+    return humanPlayer;
+  }
+
+  public CpuPlayer getCpuPlayer() {
+    return cpuPlayer;
+  }
 }
